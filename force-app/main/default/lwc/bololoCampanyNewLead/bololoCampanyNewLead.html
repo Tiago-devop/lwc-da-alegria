@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Bololo Novo Lead" icon-name="action:new_lead">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Lead" onsuccess={handleSuccess}>
+                <p>
+                    <lightning-messages></lightning-messages>
+                </p>
+                <p>
+                    <lightning-input-field field-name="LastName"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Company"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="AnnualRevenue"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Rating"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Phone"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="MobilePhone"></lightning-input-field>
+                </p>
+
+                <p>
+                    <lightning-button label="Cancel" onclick={handleReset}></lightning-button>
+                    <lightning-button label="Criar Conta" type="submit" variant="brand"></lightning-button>
+                </p>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+    <br>
+</template>
+<!-- campos obrigatórios, receita anual, classificação, mobile phone e telefone. -->

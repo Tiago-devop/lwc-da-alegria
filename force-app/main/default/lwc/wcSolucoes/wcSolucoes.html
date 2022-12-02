@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Nova Conta WC" icon-name="action:new_opportunity">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Opportunity" onsuccess={handleSuccess}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="CloseDate"></lightning-input-field>
+                <lightning-input-field field-name="StageName"></lightning-input-field>
+                <lightning-button label="Cancelar" onclick={handleReset}></lightning-button>
+                <lightning-button label="Criar Nova Conta" type="submit" variant="brand"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+    <template if:true={visivel}>
+        <lightning-card title="Contra WC Criada com Sucesso!" icon-name="action:new_opportunity">
+            <div class="slds-m-around_medium">
+                <lightning-record-view-form object-api-name="Opportunity" record-id={recordId}>
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="CloseDate"></lightning-output-field>
+                    <lightning-output-field field-name="StageName"></lightning-output-field>
+                </lightning-record-view-form>
+            </div>
+        </lightning-card>
+    </template>
+</template>

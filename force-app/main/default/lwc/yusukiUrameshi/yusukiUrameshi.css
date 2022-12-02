@@ -1,0 +1,22 @@
+div {
+    padding: 10px;
+
+}
+
+lightning-input {
+    margin-bottom: 10px;
+}
+
+lightning-button {
+    margin-right: 10px;
+    border-radius:  10px;
+}
+
+lightning-button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
+    text-align: center;
+}

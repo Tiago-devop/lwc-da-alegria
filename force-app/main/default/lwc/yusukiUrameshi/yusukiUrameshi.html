@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Yusuki Urameshi">
+        <div>
+        <lightning-input label="NUM1" data-field="num1" type="number" name="num1" onchange={handleChange}></lightning-input>
+        <lightning-input label="NUM2" data-field="num2" type="number" name="num2" onchange={handleChange}></lightning-input>
+        <lightning-button-group>
+            <lightning-button variant="brand" label="SOMAR" name="sum" onclick={handleClick}></lightning-button>
+            <lightning-button variant="brand" label="SUBTRAIR" name="sub" onclick={handleClick}></lightning-button>
+            <lightning-button variant="brand" label="MULTIPLICAR" name="mult" onclick={handleClick}></lightning-button>
+            <lightning-button variant="brand" label="DIVIDIR" name="div" onclick={handleClick}></lightning-button>
+            <lightning-button variant="brand" label="LIMPAR" name="limpar" onclick={handleReset}></lightning-button>
+        </lightning-button-group>
+        <p>RESULTADO AQUI: {result}</p>
+        </div>
+    </lightning-card>
+</template>
